@@ -12,11 +12,14 @@ Template.sidebar.onCreated(function bodyOnCreated() {
 
 
 Template.sidebar.events({
-  'click .company-cell'(event, template) {
+  'click .company-cell-address'(event, template) {
     Session.set('currentCompany', this);
     Event.emit('company.cell-clicked', this);
   },
-  'keypress #company-search-input, blur #company-search-input, focus #company-search-input'(event, instance) {
+  'submit .search-form'(event) {
+    event.preventDefault();
+  },
+  'keyup #search-input, blur #company-search-input, focus #company-search-input'(event, instance) {
     instance.state.set('filter', event.target.value);
   }
 })
@@ -26,10 +29,11 @@ Template.sidebar.helpers({
     const { state } = Template.instance(),
           filter = state.get('filter');
 
+    let sortedCompanies = _.sortBy(this.companies, 'name');
     if (filter) {
-      return this.companies.filter(company => company.name.toLowerCase().indexOf(filter.toLowerCase()) >= 0)
+      return sortedCompanies.filter(company => company.name.toLowerCase().includes(filter.toLowerCase()))
     } else {
-      return this.companies;
+      return sortedCompanies;
     }
   }
 })

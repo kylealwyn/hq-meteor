@@ -2,6 +2,9 @@
 @import './styles/variables';
 @import './styles/global';
 
+// NPM modules
+@import '{}/node_modules/flexxed/src/flexed';
+
 // Component specific
 @import './components/nav/nav';
 @import './components/content/content';

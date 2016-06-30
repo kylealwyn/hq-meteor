@@ -1,0 +1,13 @@
+.navbar {
+  background: white;
+  border-bottom: 1px solid $gray-lt;
+  padding: 1rem;
+
+  .navbar-logo {
+    margin-right: 1rem;
+  }
+
+  .navbar-name {
+    margin: 0;
+  }
+}

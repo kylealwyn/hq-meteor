@@ -1,0 +1,18 @@
+<template name="sidebar">
+  <div class="sidebar">
+    <form>
+      <input id="company-search-input" type="search" name="company-search" placeholder="Search...">
+    </form>
+    <ul class="company-list">
+      {{#each companies}}
+        {{> companyCell}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="companyCell">
+  <li class="company-cell">
+    {{name}}
+  </li>
+</template>

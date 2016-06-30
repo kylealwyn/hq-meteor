@@ -1,0 +1,43 @@
+.sidebar {
+  background: $sidebar-bg;
+  padding: 1rem;
+  width: $sidebar-width;
+}
+
+#company-search-input {
+  appearance: none;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 1rem;
+  outline: none;
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+
+  &::placeholder {
+    color: #666;
+    font-weight: bold;
+  }
+}
+
+.company-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.company-cell {
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
+  padding: 20px;
+
+  & + .company-cell {
+    margin-top: 1rem;
+  }
+
+  .company-cell-image {}
+  .company-cell-title {}
+  .company-cell-address {}
+}

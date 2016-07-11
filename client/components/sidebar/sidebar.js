@@ -19,7 +19,7 @@ Template.sidebar.events({
   'submit .search-form'(event) {
     event.preventDefault();
   },
-  'keyup #search-input, blur #company-search-input, focus #company-search-input'(event, instance) {
+  'keyup #search-input, blur #search-input, focus #search-input, input #search-input, search #search-input'(event, instance) {
     instance.state.set('filter', event.target.value);
   }
 })

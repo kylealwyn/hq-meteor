@@ -13,10 +13,12 @@
 #search-input {
   appearance: none;
   background: transparent;
-  border: 2px solid $gray-lt;
-  border-radius: 4px;
+  border: none;
+  border-bottom: 2px solid $gray-lt;
+  border-radius: 0;
   box-shadow: none;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   outline: none;
   padding: 0.4rem;
   display: block;
@@ -49,6 +51,7 @@
   .company-cell-image {
     height: 30px;
     width: 30px;
+    border: 1px solid $gray-lt;
     border-radius: 50%;
   }
 
@@ -70,7 +73,6 @@
   .company-cell-address {
     color: $gray-md;
     margin-bottom: 10px;
-
     small:hover {
       cursor: pointer;
       text-decoration: underline;

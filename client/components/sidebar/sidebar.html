@@ -1,6 +1,5 @@
 <template name="sidebar">
   <div class="sidebar">
-    <h2 class="app-title">HEADQUARTERS</h2>
     <form class="search-form">
       <input id="search-input" type="search" name="company-search" placeholder="Search...">
     </form>
@@ -13,8 +12,8 @@
 </template>
 
 <template name="companyCell">
-  <li class="company-cell">
-    <div class="row align-center-xs">
+  <li id="{{name}}" class="company-cell">
+    <div class="row align-middle-xs">
       <div class="col-xs-2">
         <img class="company-cell-image" src="/images/{{logo}}" alt="{{name}} logo">
       </div>
@@ -26,13 +25,13 @@
     <p class="company-cell-description">
       {{description}}
     </p>
-
+    <div class="col-xs" style="min-width: 0"></div>
     <p class="company-cell-address">
-      <small>{{address.street}}, {{address.city}}, {{address.state}}</small>
+      <small> <i class="ion-location"></i> {{address.street}}, {{address.city}}, {{address.state}} {{address.zip}}</small>
     </p>
 
     <a class="company-cell-site" href="{{website}}" name="{{name}} website">
-      <strong>VISIT </strong>
+      <strong>VISIT SITE</strong>
       <i class="ion-android-arrow-forward"></i>
     </a>
   </li>

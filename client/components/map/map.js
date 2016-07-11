@@ -43,7 +43,8 @@ Template.map.onRendered(function () {
   }
 
   Event.on('company.cell-clicked', listener = (company) => {
-    this.map.setCenter(company.address)
+    this.map.setCenter(company.address);
+    this.map.instance.setZoom(14)
   })
 })
 
@@ -56,4 +57,3 @@ Template.map.helpers({
     return Session.get('currentCompany')
   }
 })
-

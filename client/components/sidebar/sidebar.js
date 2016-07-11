@@ -10,10 +10,15 @@ Template.sidebar.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
 });
 
+Template.sidebar.onRendered(function onRendered() {
+  Event.on('marker.clicked', place => {
+    const card = document.getElementById(place.name);
+    card.scrollIntoView({block: 'start', behavior: 'smooth'});
+  })
+})
 
 Template.sidebar.events({
   'click .company-cell-address'(event, template) {
-    Session.set('currentCompany', this);
     Event.emit('company.cell-clicked', this);
   },
   'submit .search-form'(event) {

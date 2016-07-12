@@ -92,7 +92,7 @@ export default [{
 }, {
   name: 'Uber',
   website: 'https://uber.com',
-  description: 'Uber Technologies Inc. is an American multinational online transportation network company headquartered in San Francisco, California. It develops, markets and operates the Uber mobile app, which allows consumers with smartphones to submit a trip request which is then routed to Uber drivers who use their own cars.',
+  description: 'Uber allows consumers with smartphones to submit a trip request which is then routed to Uber drivers who use their own cars.',
   logo: 'uber-logo.png',
   address: {
     street: '1455 Market Street',
